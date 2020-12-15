@@ -87,6 +87,14 @@ def group(user_date):
     new.to_csv('booking_folder\\booking_demographic.csv', index=False)
     return new
 
+import tkinter as tk
+from tkinter import filedialog
+def file():
+    root = tk.Tk()
+    root.withdraw()
+    file_path = filedialog.askopenfilename()
+    df = pd.read_csv(file_path)
+    print (df)
 
 hotel = pd.read_csv('C:\\Users\\siane\\OneDrive\\Documents\\DRS Internship\\hotel_bookings.csv')
 
@@ -95,3 +103,4 @@ new_hotel = delete_cancelled(hotel)
 user_date = user_interface()
 hotel2 = select_7days(user_date, new_hotel)
 new = group(user_date)
+file = file()
