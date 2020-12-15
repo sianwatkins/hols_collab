@@ -94,7 +94,7 @@ def file():
     root.withdraw()
     file_path = filedialog.askopenfilename()
     df = pd.read_csv(file_path)
-    print (df)
+    print (df) #rename df hotel
 
 hotel = pd.read_csv('C:\\Users\\siane\\OneDrive\\Documents\\DRS Internship\\hotel_bookings.csv')
 
@@ -104,3 +104,4 @@ user_date = user_interface()
 hotel2 = select_7days(user_date, new_hotel)
 new = group(user_date)
 file = file()
+
