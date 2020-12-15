@@ -53,8 +53,9 @@ def user_interface():
 
 
 def select_7days(user_date, new_hotel):
+    multiple_days = int(input("For how many days?: "))
     date_from = pd.Timestamp(user_date)
-    date_to = pd.Timedelta(days=7)
+    date_to = pd.Timedelta(days=multiple_days)
     print("Selecting dates {date_to} greater than {date_from}")
     hotel2 = pd.DataFrame(new_hotel[
                               (new_hotel['date'] > date_from) &
